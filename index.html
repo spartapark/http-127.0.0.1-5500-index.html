@@ -1,171 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        {
+  @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR&display=swap');
+    font-family: 'Jua', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+} 
 
-        * {
-            font-family: 'Gowun Dodum', sans-serif;
-        }
+ body {
+    font-family:"Jua";
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url("./background.png")
+}
+.container {
+    width: 390px;
+    background-color: #ff9d73;
+    height: 100%;
 
-        .mytitle {
-            background-color: green;
-            color: antiquewhite;
-            height: 250px;
+    .photos {
+        margin-top: 30px;
+    }
+    .photo-frame {
+        background-color:  ivory;
+        margin: 15px 20px;
+        height: 200px;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        background-size: cover;
+        position: relative;
+    }
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.f-title {
+    color:ivory;
+    font-size: 25px;
+    font-weight: 900;
+}
+.f-date {
+    color: ivory;
+    font-size: 15px;
+    font-weight: 500;
+}
+#image1 {
+    background-image: url('./img1.jpg');
+}
 
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpghttps://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg);
-            background-position: center;
-            background-size: cover;
-        }
+#image2 {
+    background-image: url('./img2.jpg');
+}
 
-        .mytitle>button {
-            background-color: transparent;
-            border: 1px solid white;
-            color: antiquewhite;
-            border-radius: 50px;
-            margin-top: 20px;
+#image3 {
+    background-image: url('./img3.jpg');
+}
 
-        }
+#image4 {
+    background-image: url('./img4.jpg');
+}
+.photo_description {
+    color: beige;
+    background-color: ;
 
-        .mytitle>button:hover {
-            border: 2px solid whitesmoke
-        }
+    width: fit-content;
+    padding: 0 20px;
+    margin-bottom: 10px;
 
-        .mycards {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
 
-            margin: 20px auto 20px auto;
-        }
-
-        .mycomment {
-            color: gray;
-        }
-
-        .mypost {
-
-            width: 500px;
-            margin: 20px auto 20px auto;
-            padding: 20px 20px 20px 20px;
-            box-shadow: 0px 0px 3px 0px gray;
-        }
-
-        .mybtn {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            margin-top: 20px;
-        }
-
-        .mybtn>button {
-            margin-right: 10px;
-        }
+    transform: translate(-50%);
+    left: 50%;
+}
     </style>
 </head>
-
 <body>
-
-    <div class="mytitle">
-        <h1 class="text">내 생애 최고의 영화들 !</h1>
-        <button type="button" class="btn btn-primary">영화기록 하기</button>
+    <div class="container">
+    <div class="photos">
+        <div id="image1" class="photo-frame">
+            <span id="descl" class="photo_description">
+                piano marathon/Galaxcity
+            </span>
+        </div>
+        <div id="image2" class="photo-frame">
+            <span id="desc2" class="photo_description">
+                教材研究
+            </span>
+        </div>
+        <div id="image3" class="photo-frame">
+            <span id="desc3"class="photo_description">
+                세종대왕
+            </span>
+        </div>
+        <div id="image4" class="photo-frame">
+            <span id="desc4" class="photo_description">
+                韓国語レッスン：グループ募集中 初級、中級
+            </span>
+        </div>
+      
     </div>
-
-    <div class="mypost">
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">영화url</label>
-        </div>
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">별점</label>
-            <select class="form-select" id="inputGroupSelect01">
-                <option selected>선택하기</option>
-                <option value="1">⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-            </select>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">코멘트</label>
-        </div>
-        <div class="mybtn">
-            <button type="button" class="btn btn-dark">기록하기</button>
-            <button type="button" class="btn btn-outline-dark">닫기</button>
-        </div>
+    <div class="footer">
+        <p class="f-title">Happy Time</p>
+        <p class="f-date">2023.7.15</p>
     </div>
-    <div class="mycards">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화제목이 들어갑니다</h5>
-                        <p class="card-text">여기에 코멘트가 들어갑니다</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화제목이 들어갑니다</h5>
-                        <p class="card-text">여기에 코멘트가 들어갑니다</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화제목이 들어갑니다</h5>
-                        <p class="card-text">여기에 코멘트가 들어갑니다</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">영화제목이 들어갑니다</h5>
-                        <p class="card-text">여기에 코멘트가 들어갑니다</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-
 </body>
-
 </html>
